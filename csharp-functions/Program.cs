@@ -68,7 +68,7 @@ namespace csharp_functions
                 return nuovoArray;
             }
 
-            int[] elevaarrayalquadrato(int[] array)
+            int[] ElevaArrayAlQuadrato(int[] array)
             {
                 int[] arrayclonato = ClonaArray(array);
 
@@ -86,7 +86,7 @@ namespace csharp_functions
 
             int[] arraynumeri = { 2, 3, 4, 5 };
 
-            int[] arrayelevato = elevaarrayalquadrato(arraynumeri);
+            int[] arrayelevato = ElevaArrayAlQuadrato(arraynumeri);
 
 
             StampaArray(arrayelevato);
@@ -125,10 +125,17 @@ namespace csharp_functions
             //-Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato(Verificare che l’array
             //originale non sia stato modificato quindi ristampare nuovamente l’array originale e 
             //verificare che sia rimasto[2, 6, 7, 5, 3, 9])
+            int[] arrayNUmeri3Elevato = ElevaArrayAlQuadrato(arrayNumeri3);
+            StampaArray(arrayNUmeri3Elevato);
+
 
             //-Stampare la somma di tutti i numeri
+            int sommaArrayNUmeri3 = sommaElementiArray(arrayNumeri3);
+            Console.WriteLine(sommaArrayNUmeri3);
 
             //-Stampare la somma di tutti i numeri elevati al quadrati
+            int sommaArrayNUmeri3Elevato = sommaElementiArray(arrayNUmeri3Elevato);
+            Console.WriteLine(sommaArrayNUmeri3Elevato);
 
             //** BONUS:**Convertire le funzioni appena dichiarate in funzioni generiche, ossia 
             //    funzioni che possono lavorare con array di numeri interi** di lunghezza variabile**, ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di... e così via.
