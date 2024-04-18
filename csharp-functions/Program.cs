@@ -141,6 +141,39 @@ namespace csharp_functions
             //    funzioni che possono lavorare con array di numeri interi** di lunghezza variabile**, ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di... e così via.
             //A questo punto modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, 
             //    e dopo di che questi vengono inseriti a mano dall’utente esternamente. Rieseguire il programma con l’input preso esternamente dall’utente.
+
+            
+            Console.WriteLine("Quanti numeri vuoi inserire?");
+
+            int N;
+            
+            N = Convert.ToInt32(Console.ReadLine());
+
+
+            int[] arrayNumeriUtente = new int[N];
+
+            for (int i = 0; i < N; i++)
+            {
+                Console.WriteLine($"Inserisci il {i + 1}° numero:");
+
+                arrayNumeriUtente[i] = Convert.ToInt32(Console.ReadLine());
+
+            }
+
+            StampaArray(arrayNumeriUtente);
+
+            int[] arrayNumeriUtenteElevati = ElevaArrayAlQuadrato(arrayNumeriUtente);
+            StampaArray(arrayNumeriUtenteElevati);
+
+            int sommaArrayNumeriUtente = sommaElementiArray(arrayNumeriUtente);
+            Console.WriteLine(sommaArrayNumeriUtente);
+
+            int sommaArrayNumeriUtenteElevati = sommaElementiArray(arrayNumeriUtenteElevati);
+            Console.WriteLine(sommaArrayNumeriUtenteElevati);
+
+
+
+
         }
     }
 }
